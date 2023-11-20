@@ -130,9 +130,7 @@ public class Find_the_fake_bar {
         }else{
             throw new RuntimeException("try one more time");
         }
-
-        System.out.println("fake_bar = " + fake_bar);
-
+//        System.out.println("fake_bar = " + fake_bar);
     }
 
     @Then("user clicks Weigh button second time")

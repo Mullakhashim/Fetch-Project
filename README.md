@@ -21,6 +21,9 @@ Cucumber DBB framework was choosen for the purpose of distinguinshing the plain 
 
   3. Code the algorithm from step 1 which uses a set of actions from step 2 to find the fake gold bar
 
+# To run the code:
+- After cloning the project and setting it up, go to "CukesRunner.java" class and run it. It will automatically pick the test scenarios to run and execute them. 
+
 # Dependencies and plugins 
 Dependencies added (see pom.xml for more info):
  - Java-Selenium
@@ -31,9 +34,6 @@ Dependencies added (see pom.xml for more info):
 PlugIns to be installed:
  - Cucumber For Java
  - Gherkin
-
-# To run the code:
-- After cloning the project and setting it up, go to "CukesRunner.java" class and run it. It will automatically pick the test scenarios to run and execute them. 
 
 # Issues that you may encounter and possible solutions:
 - Issue: If you are running the code in your local machine and if your Chrome browser is newer that version 114, you might have an issue with the WebDriver Manager not being able to launch the browser.

@@ -23,6 +23,12 @@ public class Task_page {
     @FindBy(xpath = "//div[@class='result']//button")
     public WebElement result;
 
+    @FindBy(xpath = "//div[contains(text(), \"left\")]")
+    public WebElement left_bowl;
+
+    @FindBy(xpath = "//div[contains(text(), \"right\")]")
+    public WebElement right_bowl;
+
     @FindBy(id = "left_0")
     public WebElement left_0;
 

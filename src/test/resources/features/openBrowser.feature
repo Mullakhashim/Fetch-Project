@@ -8,6 +8,7 @@ Feature: Login to the task page
     Given user goes to the task page
     Then user should see the title of the task page
     Then user should see the left bowl
+    Then user should see the right bowl
     Then user should see the Reset button
     Then user should see the Weigh button
     Then user should see the Result button

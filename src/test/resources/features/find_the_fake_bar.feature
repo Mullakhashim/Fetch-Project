@@ -20,4 +20,4 @@ Feature: Finding the fake gold bar
     Then user puts first and second of remaining three bars
     Then user clicks Weigh button second time
     Then user locates the fake bar
-    Then user clicks to the fake bars number and sees confirmation message
+    Then user clicks to the bar number and sees confirmation and error messages

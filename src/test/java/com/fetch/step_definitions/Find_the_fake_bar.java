@@ -167,22 +167,32 @@ public class Find_the_fake_bar {
         taskPage.resetButton.click();
     }
 
-    @Then("user clicks to the fake bars number and sees confirmation message")
-    public void userClicksToTheFakeBarsNumberAndSeesConfirmationMessage() {
-
+    @Then("user clicks to the bar number and sees confirmation and error messages")
+    public void userClicksToTheBarNumberAndSeesConfirmationAndErrorMessages() {
         for (int i =0; i<=8; i++){
 
             if (Integer.valueOf(taskPage.list_of_bars.get(i).getText()) == fake_bar){
                 taskPage.list_of_bars.get(i).click();
 
+                Alert alert = Driver.getDriver().switchTo().alert();
+                String Actual_text = alert.getText();
+                alert.accept();
+
+                Assert.assertEquals(Actual_text,"Yay! You find it!");
+
+            }else{
+
+                taskPage.list_of_bars.get(i).click();
+
+                Alert alert = Driver.getDriver().switchTo().alert();
+                String Actual_text = alert.getText();
+                alert.accept();
+
+                Assert.assertEquals(Actual_text,"Oops! Try Again!");
+
             }
 
         }
 
-        Alert alert = Driver.getDriver().switchTo().alert();
-        String Actual_text = alert.getText();
-        alert.accept();
-
-        Assert.assertEquals(Actual_text,"Yay! You find it!");
     }
 }

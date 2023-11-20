@@ -12,7 +12,6 @@ public class Task_page {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-
     @FindBy(xpath = "//button[@id='reset' and .='Reset']")
     public WebElement resetButton;
 
@@ -89,14 +88,5 @@ public class Task_page {
 
     @FindBy(xpath = "//button[@class='square']")
     public List<WebElement> list_of_bars;
-
-
-
-
-
-
-
-
-
 
 }

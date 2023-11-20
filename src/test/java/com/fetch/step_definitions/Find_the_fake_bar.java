@@ -9,7 +9,6 @@ import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.ArrayList;
 
@@ -100,16 +99,12 @@ public class Find_the_fake_bar {
         wait.until(ExpectedConditions.visibilityOf(taskPage.first_iterations_result));
 
         result_text = taskPage.result.getText();
-
     }
 
     @Then("user puts first and second of remaining three bars")
     public void userPutsFirstAndSecondOfRemainingThreeBars(){
 
-
-
         taskPage.resetButton.click();
-
 
         taskPage.left_0.sendKeys(remaining_bars.get(0).toString());
         taskPage.right_0.sendKeys(remaining_bars.get(1).toString());
@@ -179,8 +174,6 @@ public class Find_the_fake_bar {
 
         for (int i =0; i<=8; i++){
 
-
-
             if (Integer.valueOf(taskPage.list_of_bars.get(i).getText()) == fake_bar){
                 taskPage.list_of_bars.get(i).click();
 
@@ -193,8 +186,5 @@ public class Find_the_fake_bar {
         alert.accept();
 
         Assert.assertEquals(Actual_text,"Yay! You find it!");
-
-
-
     }
 }

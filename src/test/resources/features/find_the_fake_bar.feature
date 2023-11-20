@@ -3,7 +3,6 @@ Feature: Finding the fake gold bar
   User Story:
   As a user, I should be able to determine the fake bar in max 2 iterations
 
-
   Scenario: Login to the task page
     Given user goes to the task page
     Then user should see the title of the task page
@@ -12,7 +11,6 @@ Feature: Finding the fake gold bar
     Then user should see the Reset button
     Then user should see the Weigh button
     Then user should see the Result button
-
 
   Scenario: User weighs 3 bars in each bowl
     Given user puts first three bars in the left bowl
@@ -23,4 +21,3 @@ Feature: Finding the fake gold bar
     Then user clicks Weigh button second time
     Then user locates the fake bar
     Then user clicks to the fake bars number and sees confirmation message
-#    Then user clicks to the real bars number and sees error message

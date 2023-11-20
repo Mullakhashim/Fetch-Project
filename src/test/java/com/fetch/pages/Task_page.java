@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import javax.xml.xpath.XPath;
+import java.util.List;
 
 public class Task_page {
 
@@ -38,6 +39,24 @@ public class Task_page {
     @FindBy(id = "left_2")
     public WebElement left_2;
 
+    @FindBy(id = "left_3")
+    public WebElement left_3;
+
+    @FindBy(id = "left_4")
+    public WebElement left_4;
+
+    @FindBy(id = "left_5")
+    public WebElement left_5;
+
+    @FindBy(id = "left_6")
+    public WebElement left_6;
+
+    @FindBy(id = "left_7")
+    public WebElement left_7;
+
+    @FindBy(id = "left_8")
+    public WebElement left_8;
+
     @FindBy(id = "right_0")
     public WebElement right_0;
 
@@ -46,6 +65,32 @@ public class Task_page {
 
     @FindBy(id = "right_2")
     public WebElement right_2;
+    @FindBy(id = "right_3")
+    public WebElement right_3;
+
+    @FindBy(id = "right_4")
+    public WebElement right_4;
+
+    @FindBy(id = "right_5")
+    public WebElement right_5;
+
+    @FindBy(id = "right_6")
+    public WebElement right_6;
+
+    @FindBy(id = "right_7")
+    public WebElement right_7;
+
+    @FindBy(id = "right_8")
+    public WebElement right_8;
+
+    @FindBy(xpath = "//div[@class='game-info']//ol")
+    public WebElement first_iterations_result;
+
+    @FindBy(xpath = "//div[@class='game-info']//ol//li/following-sibling::*[1]")
+    public WebElement second_iteration_result;
+
+    @FindBy(xpath = "//button[@class='square']")
+    public List<WebElement> list_of_bars;
 
 
 

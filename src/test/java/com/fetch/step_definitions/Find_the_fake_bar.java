@@ -7,8 +7,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -20,7 +18,7 @@ public class Find_the_fake_bar {
     Task_page taskPage = new Task_page();
     String result_text="";
     ArrayList<Integer> remaining_bars = new ArrayList<>();
-    int fake_bar= 0;
+    int fake_bar ;
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
 
     @Given("user goes to the task page")
@@ -97,22 +95,24 @@ public class Find_the_fake_bar {
     }
 
     @Then("user clicks Weigh button")
-    public void userClicksWeighButton() {
+    public void userClicksWeighButton(){
         taskPage.weighButton.click();
         wait.until(ExpectedConditions.visibilityOf(taskPage.first_iterations_result));
 
         result_text = taskPage.result.getText();
+
     }
 
     @Then("user puts first and second of remaining three bars")
-    public void userPutsFirstAndSecondOfRemainingThreeBars() {
+    public void userPutsFirstAndSecondOfRemainingThreeBars(){
+
+
+
+        taskPage.resetButton.click();
+
 
         taskPage.left_0.sendKeys(remaining_bars.get(0).toString());
         taskPage.right_0.sendKeys(remaining_bars.get(1).toString());
-
-
-
-
 
     }
 
@@ -190,6 +190,8 @@ public class Find_the_fake_bar {
 
         Alert alert = Driver.getDriver().switchTo().alert();
         String Actual_text = alert.getText();
+        alert.accept();
+
         Assert.assertEquals(Actual_text,"Yay! You find it!");
 
 

@@ -4,8 +4,6 @@ import com.fetch.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import javax.xml.xpath.XPath;
 import java.util.List;
 
 public class Task_page {
@@ -15,7 +13,7 @@ public class Task_page {
     }
 
 
-    @FindBy(id = "reset")
+    @FindBy(xpath = "//button[@id='reset' and .='Reset']")
     public WebElement resetButton;
 
     @FindBy(id = "weigh")

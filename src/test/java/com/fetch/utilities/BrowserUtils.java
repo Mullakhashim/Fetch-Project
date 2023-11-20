@@ -15,6 +15,7 @@ public class BrowserUtils {
             Thread.sleep(second);
         }catch (InterruptedException e){
 
+
         }
     }
 

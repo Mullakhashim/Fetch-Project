@@ -89,4 +89,10 @@ public class Task_page {
     @FindBy(xpath = "//button[@class='square']")
     public List<WebElement> list_of_bars;
 
+    @FindBy(xpath = "//input[@class='square' and @data-side='left']")
+    public List<WebElement> left_bowl_boxes;
+
+    @FindBy(xpath = "//input[@class='square' and @data-side='right']")
+    public List<WebElement> right_bowl_boxes;
+
 }

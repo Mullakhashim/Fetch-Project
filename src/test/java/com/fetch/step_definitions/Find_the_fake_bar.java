@@ -33,15 +33,19 @@ public class Find_the_fake_bar {
     @Then("user should see the left bowl")
     public void user_should_see_the_left_bowl() {
         Assert.assertTrue(taskPage.left_bowl.isDisplayed());
-        Assert.assertTrue(taskPage.left_0.isDisplayed());
-        Assert.assertTrue(taskPage.left_1.isDisplayed());
-        Assert.assertTrue(taskPage.left_2.isDisplayed());
-        Assert.assertTrue(taskPage.left_3.isDisplayed());
-        Assert.assertTrue(taskPage.left_4.isDisplayed());
-        Assert.assertTrue(taskPage.left_5.isDisplayed());
-        Assert.assertTrue(taskPage.left_6.isDisplayed());
-        Assert.assertTrue(taskPage.left_7.isDisplayed());
-        Assert.assertTrue(taskPage.left_8.isDisplayed());
+        for (int i = 0; i <= 8; i++) {
+
+            Assert.assertTrue(taskPage.left_bowl_boxes.get(i).isDisplayed());
+        }
+//        Assert.assertTrue(taskPage.left_0.isDisplayed());
+//        Assert.assertTrue(taskPage.left_1.isDisplayed());
+//        Assert.assertTrue(taskPage.left_2.isDisplayed());
+//        Assert.assertTrue(taskPage.left_3.isDisplayed());
+//        Assert.assertTrue(taskPage.left_4.isDisplayed());
+//        Assert.assertTrue(taskPage.left_5.isDisplayed());
+//        Assert.assertTrue(taskPage.left_6.isDisplayed());
+//        Assert.assertTrue(taskPage.left_7.isDisplayed());
+//        Assert.assertTrue(taskPage.left_8.isDisplayed());
     }
 
     @Then("user should see the Reset button")
@@ -65,31 +69,42 @@ public class Find_the_fake_bar {
     @Then("user should see the right bowl")
     public void userShouldSeeTheRightBowl() {
         Assert.assertTrue(taskPage.right_bowl.isDisplayed());
-        Assert.assertTrue(taskPage.right_0.isDisplayed());
-        Assert.assertTrue(taskPage.right_1.isDisplayed());
-        Assert.assertTrue(taskPage.right_2.isDisplayed());
-        Assert.assertTrue(taskPage.right_3.isDisplayed());
-        Assert.assertTrue(taskPage.right_4.isDisplayed());
-        Assert.assertTrue(taskPage.right_5.isDisplayed());
-        Assert.assertTrue(taskPage.right_6.isDisplayed());
-        Assert.assertTrue(taskPage.right_7.isDisplayed());
-        Assert.assertTrue(taskPage.right_8.isDisplayed());
+        for (int i = 0; i <= 8; i++) {
+            Assert.assertTrue(taskPage.right_bowl_boxes.get(i).isDisplayed());
+        }
+//        Assert.assertTrue(taskPage.right_0.isDisplayed());
+//        Assert.assertTrue(taskPage.right_1.isDisplayed());
+//        Assert.assertTrue(taskPage.right_2.isDisplayed());
+//        Assert.assertTrue(taskPage.right_3.isDisplayed());
+//        Assert.assertTrue(taskPage.right_4.isDisplayed());
+//        Assert.assertTrue(taskPage.right_5.isDisplayed());
+//        Assert.assertTrue(taskPage.right_6.isDisplayed());
+//        Assert.assertTrue(taskPage.right_7.isDisplayed());
+//        Assert.assertTrue(taskPage.right_8.isDisplayed());
 
     }
 
     @Given("user puts first three bars in the left bowl")
     public void userPutsFirstBarsInTheLeftBowl() {
-        taskPage.left_0.sendKeys("0");
-        taskPage.left_1.sendKeys("1");
-        taskPage.left_2.sendKeys("2");
+        for (int i = 0; i <= 2; i++) {
+            taskPage.left_bowl_boxes.get(i).sendKeys(""+i);
+        }
+
+//        taskPage.left_0.sendKeys("0");
+//        taskPage.left_1.sendKeys("1");
+//        taskPage.left_2.sendKeys("2");
 
     }
 
     @Given("user puts last three bars in the right bowl")
     public void userPutsLastThreeBarsInTheRightBowl() {
-        taskPage.right_0.sendKeys("8");
-        taskPage.right_1.sendKeys("7");
-        taskPage.right_2.sendKeys("6");
+        for (int i = 8; i >= 6; i--) {
+            taskPage.right_bowl_boxes.get(i).sendKeys(""+i);
+        }
+
+//        taskPage.right_8.sendKeys("8");
+//        taskPage.right_7.sendKeys("7");
+//        taskPage.right_6.sendKeys("6");
 
     }
 
@@ -106,8 +121,8 @@ public class Find_the_fake_bar {
 
         taskPage.resetButton.click();
 
-        taskPage.left_0.sendKeys(remaining_bars.get(0).toString());
-        taskPage.right_0.sendKeys(remaining_bars.get(1).toString());
+        taskPage.left_4.sendKeys(remaining_bars.get(0).toString());
+        taskPage.right_5.sendKeys(remaining_bars.get(1).toString());
 
     }
 

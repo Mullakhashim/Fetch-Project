@@ -11,7 +11,7 @@ Cucumber DBB framework was choosen for the purpose of distinguinshing the plain 
 Dependencies added:
  - Java-Selenium
  - Cucumber io:
-   cucumber JUnit
+   cucumber JUnit,
    cucumber java
 
 

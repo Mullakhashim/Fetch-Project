@@ -6,6 +6,20 @@ This project contains pom.xml file which contains all the necessary dependencies
 Cucumber DBB framework was choosen for the purpose of distinguinshing the plain test cases in the feature files (src/test/resouces/features) which are written with Gherkin language 
   so that business can understand what scenarios are being tested and the the actual implementation of a code is located in "java" package (src/test/java/com/fetch/tests)
 
+Challenges that were addressed in this project
+
+  1. Found the best algorithm (minimum number of weighings for any possible fake bar position) to find the fake gold bar to be *2 weighings*.
+      The algorithm weighs gold bars until a fake one is found, clicks on a fake bar number, confirms the alert message.
+
+  2. Created the test automation project using Java language to perform
+    a. clicks on buttons (“Weigh”, “Reset”)
+    b. Getting the measurement results (field between the 'bowls')
+    c. filling out the bowls grids with bar numbers (0 to 8)
+    d. getting a list of weighing
+    e. Clicking on the gold bar number at the bottom of the website and checking for the alert message
+
+  3. Code the algorithm from step 1 which uses a set of actions from step 2 to find the fake gold bar
+
 Dependencies added (see pom.xml for more info):
  - Java-Selenium
  - Cucumber io:

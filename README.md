@@ -9,7 +9,8 @@ Cucumber DBB framework was choosen for the purpose of distinguinshing the plain 
 Challenges that were addressed in this project
 
   1. Found the best algorithm (minimum number of weighings for any possible fake bar position) to find the fake gold bar to be *2 weighings*.
-      The algorithm weighs gold bars until a fake one is found, clicks on a fake bar number, confirms the alert message.
+      The algorithm weighs gold bars until a fake one is found, clicks on a fake bar number and confirms the Confirmation message. 
+      Afterwards, algorithm clicks on all the real bar numbers and confirms the Error message.
 
   2. Created the test automation project using Java language to perform
     a. clicks on buttons (“Weigh”, “Reset”)
@@ -36,5 +37,3 @@ To run the code:
 Issues that you may encounter and possible solutions:
 - Issue: If you are running the code in your local machine and if your Chrome browser is newer that version 114, you might have an issue with the WebDriver Manager not being able to launch the browser.
 - Possible Solution: try to downgrade your Chrome version or to update the Dependencies to be the most up to date versions 
-
-
